@@ -21,8 +21,8 @@
                         <div class="card-body flex-column d-flex">
                             <img src="{{ asset('storage/' . $article->picture) }}" class="card-img-top"
                                  style="max-height: 300px;" alt="image">
-                            <h5 class="card-text font-weight-bold mt-auto text-center"
-                                style="font-size: 24px;">{{ $article->price }} €</h5>
+                            <h5 class="card-text mt-auto text-center"
+                                style="font-size: 24px; color: orange; font-weight: bold">{{ $article->price }} €</h5>
                         </div>
 
                         <div class="d-flex justify-content-between card-footer mt-auto">

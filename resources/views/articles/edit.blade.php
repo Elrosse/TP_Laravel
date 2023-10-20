@@ -3,11 +3,11 @@
 @section("content")
 
     @if (isset($article))
-        <h1 style="margin-left: 45px">Éditer un article</h1>
+        <h1 style="margin-left: 45px">Éditer un tableau</h1>
         <form method="POST" action="{{ route('articles.update', $article) }}" enctype="multipart/form-data">
             @method('PUT')
             @else
-                <h1 style="margin-left: 45px">Créer un article</h1>
+                <h1 style="margin-left: 45px">Créer un tableau</h1>
                 <form method="POST" action="{{ route('articles.store') }}" enctype="multipart/form-data">
                     @endif
 
@@ -25,7 +25,7 @@
 
 
                                 <div class="mb-3">
-                                    <label for "description" class="form-label">Description</label>
+                                    <label for="description" class="form-label">Description</label>
                                     <textarea name="description" class="form-control form-control-short" id="description" lang="fr" rows="5" placeholder="La description de l'article">{{ isset($article->description) ? $article->description : old('description') }}</textarea>
                                     @error("description")
                                     <div class="text-danger">{{ $message }}</div>
